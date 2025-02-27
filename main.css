@@ -1,0 +1,101 @@
+/* Importar fuente para un diseño más atractivo */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ====== Estilos de la barra de navegación ====== */
+header {
+    background-color: #1f3c88; /* Azul oscuro */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+
+/* Logo del encabezado */
+.logo img {
+    width: 70px; /* Ajusta el tamaño del logo */
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* ====== Estilos de la sección principal ====== */
+main {
+    background-color: #f5f4e6; /* Color beige claro */
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Contenedor general del contenido principal */
+.content-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Imagen de Totoro a la izquierda */
+.left-image img {
+    width: 230px;
+}
+
+/* Texto central */
+.content-text {
+    max-width: 500px;
+    text-align: center;
+}
+
+.content-text h1 {
+    font-size: 2.5em;
+    color: #3a3a3a;
+    font-weight: 600;
+}
+
+.content-text p {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #4a4a4a;
+}
+
+/* Imagen con los personajes de Ghibli a la derecha */
+.right-image img {
+    width: 350px;
+}
+
+/* ====== Estilos para el texto japonés y título ====== */
+.studio-text {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.studio-text h2 {
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+    border-bottom: 3px solid black;
+}
+
+.studio-text h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: 10px;
+}
