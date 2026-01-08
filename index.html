@@ -3,44 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Ghibli</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Studio Ghibli | El Mundo de la Imaginación</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+
     <!-- Barra de navegación -->
-    <header>
+    <header class="navbar">
         <div class="logo">
-            <img src="/images/logo.jpg" alt="Studio Ghibli Logo">
+            <img src="./media/images/logo.jpg" alt="Studio Ghibli Logo">
         </div>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Películas</a></li>
                 <li><a href="#">Datos Curiosos</a></li>
-                <li><a href="#">Frases Memorables</a></li>
+                <li><a href="#">Frases</a></li>
                 <li><a href="#">Galería</a></li>
-                <li><a href="#">Acerca de</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Sección principal -->
-    <main>
-        <div class="content-main">
-            <div class="left-image">
-                <img src="images/imagenSecundaria.png" alt="imagenPng">
+    <main class="hero">
+        <div class="hero-container">
+
+            <!-- Imagen Izquierda (Se oculta en móvil o se mueve) -->
+            <div class="hero-side hero-left">
+                <img src="./media/images/imagenSecundaria.png" alt="Totoro">
             </div>
-            <div class="content-text">
-                <h1>BIENVENIDO AL MUNDO DE GHIBLI</h1>
+
+            <!-- Contenido Central -->
+            <div class="hero-text">
+                <span class="subtitle">Mundo Mágico</span>
+                <h1>BIENVENIDO AL MUNDO <br> <span>DE GHIBLI</span></h1>
                 <p>
-                    Aquí, cada historia es un puente hacia la imaginación, donde los sueños cobran vida y las emociones 
-                    trascienden el tiempo. Desde los paisajes encantadores hasta los personajes inolvidables, prepárate 
-                    para explorar un universo que celebra la belleza de lo simple y la magia de lo extraordinario.
+                    Aquí, cada historia es un puente hacia la imaginación, donde los sueños cobran vida 
+                    y las emociones trascienden el tiempo.
                 </p>
+
+                <a href="#" class="btn-explore">Explorar Historias</a>
             </div>
-            <div class="right-image">
-                <img src="./images/imagenPrincipal.png" alt="Personajes de Ghibli">
+
+            <!-- Imagen Derecha -->
+            <div class="hero-side hero-right">
+                <img src="./media/images/imagenPrincipal.png" alt="Personajes Ghibli">
             </div>
+
         </div>
+    </main>
+
 </body>
 </html>

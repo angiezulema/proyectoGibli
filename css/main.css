@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-color: #F1F1DE;
+    --primary-blue: #1F3968;
+    --text-color: #3A3A3A;
+    --accent-color: #d1ad7e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* ===== NAVIGATION ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #1F3968;
+}
+
+.logo img {
+    height: 60px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color:#F1F1DE;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 5%;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    gap: 20px;
+    max-width: 1400px;
+    width: 100%;
+}
+
+/* Imágenes laterales */
+.hero-side img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Contenido Central */
+.hero-text {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.hero-text h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Tamaño fluido */
+    line-height: 1.1;
+    color: var(--primary-blue);
+    margin: 15px 0;
+}
+
+.hero-text h1 span {
+    color: var(--accent-color);
+}
+
+.hero-text p {
+    font-size: 1rem;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+
+.btn-explore {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-explore:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE (Móviles y Tablets) ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr 1fr; /* Quitamos una columna para que no se vea apretado */
+    }
+    .hero-right {
+        display: none; /* Ocultamos la imagen de la derecha en tablets */
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr; /* Todo en una sola fila */
+    }
+
+    .hero-left {
+        order: 2; /* Movemos la imagen abajo del texto */
+    }
+
+    .hero-text {
+        order: 1;
+    }
+
+    .hero-side img {
+        max-width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+}
